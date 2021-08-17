@@ -88,14 +88,14 @@ client.on('interactionCreate', async interaction => {
             member.roles.remove('847793663597608990')
         }
         else{
-        member.roles.add(r2)
+        member.roles.add(r1)
             await interaction.reply({ content: "The role was successfully added to you", ephemeral: true })}
           }
 
 else if(choice == 'second_option'){
     if (member.roles.cache.some(role => role.id == r2)) {
         interaction.reply({content: "The role was successfully removed from you", ephemeral: true})
-        member.roles.remove('847793663597608990')
+        member.roles.remove(r2)
     }
     else{
     member.roles.add(r2)
@@ -106,7 +106,7 @@ else if(choice == 'second_option'){
       else if(choice == 'third_option'){
         if (member.roles.cache.some(role => role.id == r3)) {
             interaction.reply({content: "The role was successfully removed from you", ephemeral: true})
-            member.roles.remove('847793663597608990')
+            member.roles.remove(r3)
         }
         else{
         member.roles.add(r3)
@@ -129,7 +129,7 @@ else if(choice == 'second_option'){
               else if(choice == 'fifth_option'){
                 if (member.roles.cache.some(role => role.id == r5)) {
                     interaction.reply({content: "The role was successfully removed from you", ephemeral: true})
-                    member.roles.remove(r4)
+                    member.roles.remove(r5)
                 }
                 else{
                 member.roles.add(r5)
